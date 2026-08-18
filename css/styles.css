@@ -367,6 +367,25 @@ p {
 .about-grid {
   display: grid;
   gap: var(--space-lg);
+  align-items: start;
+}
+
+.about-portrait {
+  margin: 0;
+}
+
+.about-portrait img {
+  width: 100%;
+  max-width: 22rem;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  aspect-ratio: 3 / 4;
+}
+
+.about-main {
+  display: grid;
+  gap: var(--space-md);
 }
 
 .about-copy p {
@@ -752,8 +771,13 @@ p {
 
 @media (min-width: 960px) {
   .about-grid {
-    grid-template-columns: 1.4fr 0.8fr;
+    grid-template-columns: minmax(14rem, 18rem) minmax(0, 1fr);
+    gap: var(--space-xl);
     align-items: start;
+  }
+
+  .about-portrait img {
+    max-width: none;
   }
 
   .hero-visual {
